@@ -1,0 +1,169 @@
+.btn-galery {
+    padding: 6px 22px;
+    border-radius: 4px;
+    border-color: transparent;
+    background-color: #F5F4FA;
+    color: var(--font-color);
+    font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-galery:hover, .btn-galery:focus {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.search-list {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 50px;
+}
+
+.search-item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+/*     margin: -15px; variant 3 */
+}
+
+.flex-element {
+   /*  width: 380px; 1 variant 3variant*/
+    /* width: calc((100% - 60px) / 3); */ /* calc (100% - кол-во маржинов в строке * значение маржина) / кол во єлемнтов встроке*/
+    /* margin: 15px; 3 variant */
+/*     margin-right: 30px;
+    margin-bottom: 30px;  1 variant*/
+}
+
+/* .flex-element:nth-child(3n) {
+    margin-right: 0px;
+} */
+/* 1variant */
+/* .flex-element:nth-child(3n) {
+    margin-right: 0;
+}
+.flex-element:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+} */
+
+/* Variant 2*/
+/* .flex-element:not(:nth-child(3n)) {
+    margin-right: 30px;
+} */
+
+/* .flex-element:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
+} */
+
+/* .flex-element {
+    margin-bottom: 30px;
+} */
+
+/* .flex-element:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+} */
+
+.card-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    font-family: var(--primary-font);
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    opacity: 0;
+
+    background-color: rgba(33, 150, 243, 0.9);
+    color: var(--white-color);
+    transform: translateY(100%);
+    transition: transform var(--cubic),
+    opacity 250ms var(--cubic);
+}
+
+.portfolio-card {
+    display: block;
+    transition: box-shadow var(--cubic);
+}
+
+.portfolio-card:hover, .portfolio-card:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+}
+
+.portfolio-card:hover .card-overlay {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.card-description {
+    padding-top: 20px;
+    border: 1px solid rgba(238, 238, 238, 1);
+    border-top: none;
+}
+
+.portfolio-header {
+    margin-bottom: 4px;
+    margin-left: 24px;
+
+    font-family: var(--primary-font);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+
+    color: var(--font-color);
+}
+.portfolio-text {
+    margin-bottom: 20px;
+    margin-left: 24px;
+
+    font-family: var(--primary-font);
+    font-weight: 400;
+    color: var(--secondary-font-color);
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+}
+

@@ -1,0 +1,234 @@
+.footer {
+  padding: 60px 0;
+  background: #2f303a;
+}
+.footer__container {
+  @media screen and (min-width: $mobile) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+  @media screen and (min-width: $desk) {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    text-align: left;
+    width: 1200px;
+     margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+ .adress {
+  @media screen and (min-width: $desk) {
+    display: flex;
+    margin-top: 20px;}
+ }
+
+.footer__adress {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--primary-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+  @media screen and ($desk) {
+    width: 100%;
+  }
+}
+
+.footer__contact {
+  font-family: var(--primary-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.footer__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer__item:last-child {
+  @media screen and (min-width: $mobile) and (max-width: $pretablet){
+    margin-bottom: 60px;
+  }
+}
+
+.footer__header {
+  margin-bottom: 20px;
+  font-family: var(--primary-font);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--white-color);
+  @media screen and (min-width: $mobile) and (min-width: $pretablet){
+    text-align: center;
+  }
+}
+
+.footer__icons {
+  display: flex;
+  @media screen and (min-width: $mobile) and (min-width: $pretablet){
+    margin-bottom: 60px;
+  }
+}
+
+.footer__card:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer__icon {
+  fill: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    border-radius: 50%;
+  }
+}
+
+.adress {
+@media screen and (min-width: $desk) {
+  display: flex;
+  margin-top: 20px;}
+    
+}
+
+.logo__footer {
+  color: var(--white-color);
+}
+
+.invite {
+    @media screen and (min-width: $mobile) {
+    display: block;
+    width: auto;
+    margin-bottom: 60px;
+
+}
+ @media screen and (min-width: $tablet) and (min-width: $predesk){
+    margin-right: 80px;
+  }
+  @media screen and (min-width: $desk) {  
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 210px;
+  margin-left: 70px;
+}
+ 
+}
+
+.footer-input {
+  @media screen and (min-width: $mobile) {
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+  }
+  display: flex;
+  margin-right: 12px;
+  padding: 15px 16px;
+  background-color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: #ffffff;
+  outline: none;
+   @media screen and (min-width: $desk) {
+    margin-bottom: 20px;
+    display: flex;
+    width: auto;  }
+  &__field {
+    @media screen and (min-width: $mobile) {
+      margin: 0;
+    }
+    @media screen and (min-width: $desk) 
+    {  margin-left: 0;
+      margin-right: auto;
+    }
+  }
+  &__header {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
+  &__form {
+    @media screen and (min-width: $mobile) {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+      @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    width: auto;}
+    @media screen and (min-width: $desk) {
+    display: flex;
+    flex-direction: row;
+    width: 570px;}
+  }
+}
+
+.footer-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 28px;
+}
+
+.send-icon {
+  margin-left: 10px;
+}
+
+.tablet__footer {
+  @media screen and (min-width: $tablet) and (max-width: $predesk) {
+    width: $tablet;
+    display: flex;
+    justify-content: space-between;
+  }
+      @media screen and (min-width: $desk) {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+}
