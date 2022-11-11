@@ -1,5 +1,10 @@
 .advantages__section {
-  @media screen and (min-width: $mobile) and (min-width: $tablet) {
+  @media screen and (min-width: $mobile) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: $tablet) {
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -19,6 +24,7 @@
 }
 
 .advantages__item {
+  width: 100%;
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 
@@ -29,11 +35,22 @@
 
   border-radius: 4px;
   background-color: #f5f4fa;
+  @media screen and (min-width: $mobile) {
+    padding: 25px 190px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding: 25px 142px;
+  }
+
+  @media screen and (min-width: $desk) {
+    padding: 25px 100px;
+  }
 }
 
 .advantages__icon {
   display: inline-block;
-  margin: 25px 100px;
+ 
 }
 
 .advantages__heading {

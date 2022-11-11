@@ -4,11 +4,13 @@
   }
   @media screen and (min-width: $tablet) {
     display: flex;
+    justify-content: center;
     font-size: 24px;
   }
   @media screen and (min-width: $desk) {
     display: flex;
-  }
+    justify-content: start; 
+ }
   align-items: center;
 
   font-family: var(--secondary-font);
@@ -31,14 +33,21 @@
 }
 
 .header__container {
-  display: flex;
   @media screen and (min-width: $mobile) {
+    display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    padding: 16px 0;
   }
   @media screen and (min-width: $tablet) {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 0;
+  }
+  @media screen and (min-width: $desk) {
+    display: flex;
+
   }
 }
 
@@ -61,6 +70,19 @@
   margin-left: 93px;
   &__item:not(:last-child) {
     margin-right: 40px;
+  }
+  @media screen and (min-width: $mobile) {
+    display: none;
+  }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    margin-left: 86px;
+    margin-right: 97px;
+  }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    margin-left: 93px;
+    margin-right: 0;
   }
 }
 
@@ -88,20 +110,21 @@
   display: flex;
   align-items: center;
   margin-left: auto;
+  @media screen and (min-width: $mobile) {
+    display: none;
+  }
   @media screen and (min-width: $tablet) {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     flex-direction: column;
-    margin-left: 90px;
-    margin-right: auto;
+    gap: 10px;
   }
   @media screen and (min-width: $desk) {
     display: flex;
-
     flex-direction: row;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
     margin-left: auto;
     margin-right: 0;
   }
@@ -114,11 +137,30 @@
     }
   }
   &__icon {
-    width: 20px;
-    height: 20px;
-
     fill: currentColor;
   }
+}
+
+.auth-nav__icon--mail {
+  @media screen and (min-width: $tablet) {
+    width: 14px;
+    height: 10px;
+  }
+  @media screen and (min-width: $desk) {
+    width: 16px;
+    height: 12px;
+   }
+}
+
+.auth-nav__icon--phone {
+  @media screen and (min-width: $tablet) {
+   width: 10px;
+   height: 14px;
+  }
+  @media screen and (min-width: $desk) {
+    width: 10px;
+    height: 16px;
+   }
 }
 
 .auth-nav__contact {
@@ -157,7 +199,6 @@
   }
 }
 
-.menu,
 .auth-nav {
   @media screen and (min-width: $mobile) {
     display: none;
@@ -178,9 +219,14 @@
 
 .btn__mobile {
   @media screen and (min-width: $mobile) {
+    background-color: transparent;
+    border: none;
     display: block;
+    padding: 10px 0;
   }
   @media screen and (min-width: $tablet) {
-    display: flex;
-  }
+    background-color: transparent;
+    border: none;
+    display: block;
+    padding: 10px 0;  }
 }

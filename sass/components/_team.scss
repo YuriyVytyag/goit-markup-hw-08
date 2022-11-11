@@ -18,7 +18,7 @@
     }
 
 .team__item {
-    height: 428px;
+    height: 100%;
     width: 100%;
     flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 
@@ -60,6 +60,7 @@
     list-style: none;
     align-items: center;
     justify-content: center;
+    margin-bottom: 24px;
 }
 
 .social-icon {

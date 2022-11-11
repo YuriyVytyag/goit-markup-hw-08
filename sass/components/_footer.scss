@@ -103,6 +103,9 @@
   @media screen and (min-width: $mobile) and (min-width: $pretablet){
     margin-bottom: 60px;
   }
+  @media screen and (min-width: $desk) {
+    margin-bottom: 0;  }
+ 
 }
 
 .footer__card:not(:last-child) {
@@ -120,9 +123,12 @@
 }
 
 .adress {
+  @media screen and (min-width: $mobile) {
+    margin-top: 20px;}
 @media screen and (min-width: $desk) {
   display: flex;
-  margin-top: 20px;}
+  margin-top: 20px;
+/* margin-right: 70px */;}
     
 }
 
@@ -141,23 +147,17 @@
     margin-right: 80px;
   }
   @media screen and (min-width: $desk) {  
-  display: flex;
+  display: block;
   flex-wrap: wrap;
-
-  width: 210px;
-  margin-left: 70px;
+margin-right: 93;
+/*   width: 210px;
+ */  margin-left: 70px;
 }
  
 }
 
 .footer-input {
-  @media screen and (min-width: $mobile) {
-    margin-bottom: 20px;
-    display: block;
-    width: 100%;
-  }
   display: flex;
-  margin-right: 12px;
   padding: 15px 16px;
   background-color: inherit;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -165,17 +165,42 @@
   border-radius: 4px;
   color: #ffffff;
   outline: none;
-   @media screen and (min-width: $desk) {
+  @media screen and (min-width: $mobile) {
     margin-bottom: 20px;
+    display: block;
+    width: 100%;
+  }
+  @media screen and (min-width: $mobile) {
+    width: 358px;
+
+  }
+  @media screen and (min-width: $desk) {
+  /*   display: flex;
+    width: auto;  
+    margin-bottom: 20px;
+    margin-right: 12px;
+    display: block; */
+
     display: flex;
-    width: auto;  }
+    width: 358px;
+    height: 50px;
+    margin-right: 12px;
+    padding: 15px 16px;
+    background-color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    outline: none;
+  }
+
   &__field {
     @media screen and (min-width: $mobile) {
       margin: 0;
     }
-    @media screen and (min-width: $desk) 
-    {  margin-left: 0;
-      margin-right: auto;
+    @media screen and (min-width: $desk) { 
+      display: flex;
+      flex-direction: column;  
+      margin-right: 0;
     }
   }
   &__header {
@@ -194,17 +219,23 @@
       flex-direction: column;
       flex-wrap: wrap;
       justify-content: center;
+      align-items: center;
       width: 100%;
-      margin-left: auto;
-      margin-right: auto;
+    
     }
       @media screen and (min-width: $tablet) {
     display: flex;
     flex-direction: column;
-    width: auto;}
+    width: auto;
+        justify-content: center;
+        align-items: center;
+        
+  }
     @media screen and (min-width: $desk) {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
     width: 570px;}
   }
 }

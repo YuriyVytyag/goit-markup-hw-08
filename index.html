@@ -17,11 +17,22 @@
 </head>
 
 <body>
-    <header class="header">
+  <header class="header">
     <div class="container header__container">
-    <div class="mobile__header"><button class="btn__mobile menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-      <svg width="20" height="16"><use href="./img/icons.svg#icon-menu_24px"></use></svg>
-    </button></div>
+
+      <div class="mobile__header js-menu-container" id="mobile-menu">
+        <button class="btn__mobile menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="24" height="16">
+            <use href="./img/icons.svg#icon-menu_24px"></use>
+          </svg>
+        </button>
+    
+<!--         <ul class="mobile-menu">
+          <li class="mobile-menu__item"><a href="./index.html" class="mobile-menu__link link active">Студія</a></li>
+          <li class="mobile-menu__item"><a href="./portfolio.html" class="mobile-menu__link link">Портфоліо</a></li>
+          <li class="mobile-menu__item"><a href="" class="mobile-menu__link link">Контакти</a></li>
+        </ul> -->
+      </div>
       <nav class="header__nav">
         <a href="./index.html" class="logo link">Web
           <span class="logo__part">Studio</span></a>
@@ -33,12 +44,13 @@
       </nav>
       <ul class="auth-nav list">
         <li class="auth-nav__item">
-          <a href="mailto:info@devstudio.com" class="auth-nav__contact link"><svg class="auth-nav__icon" width="16" height="12">
+          <a href="mailto:info@devstudio.com" class="auth-nav__contact link"><svg class="auth-nav__icon auth-nav__icon--mail" width="16"
+              height="12">
               <use href="./img/icons.svg#icon-envelope"></use>
             </svg> info@devstudio.com</a>
         </li>
         <li class="auth-nav__item">
-          <a href="tel:+380961111111" class="auth-nav__contact link"><svg class="auth-nav__icon" width="10" height="16">
+          <a href="tel:+380961111111" class="auth-nav__contact link"><svg class="auth-nav__icon auth-nav__icon--phone" width="10" height="16">
               <use href="./img/icons.svg#icon-smartphone"></use>
             </svg>+38 096 111 11 11</a>
         </li>
@@ -46,11 +58,11 @@
     </div>
   </header>
   <main>
-        <section>
+    <section>
       <div class="overlay">
         <div class="container hero__container">
           <h1 class="hero__heading">Ефективні рішення для вашого бізнесу</h1>
-          <button class="btn btn__hero" type="button" data-modal-open >Замовити послугу
+          <button class="btn btn__hero" type="button" data-modal-open>Замовити послугу
           </button>
           <div data-modal class="backdrop is-hidden">
             <div class="modal">
@@ -80,11 +92,14 @@
                   </div>
                   <label class="input__name" for="comment">Коментар
                   </label>
-                  <textarea class="input__area input__textarea" name="comment" id="comment" rows="8" placeholder="Введіть текст"></textarea>
-                    <label class="input__chek" for="agree"><input class="input__chek-btn" type="checkbox" name="agree" id="agree"><svg class="input__chek-icon" width="16" height="15">
+                  <textarea class="input__area input__textarea" name="comment" id="comment" rows="8"
+                    placeholder="Введіть текст"></textarea>
+                  <label class="input__chek" for="agree"><input class="input__chek-btn" type="checkbox" name="agree"
+                      id="agree"><svg class="input__chek-icon" width="16" height="15">
                       <use href="./img/icons.svg#icon-icon-check"></use>
                     </svg>
-                      <span class="input__chek--text">Погоджуюся з розсилкою та приймаю</span> <a class="input__link" href="#">Умови договору</a></label>
+                    <span class="input__chek--text">Погоджуюся з розсилкою та приймаю</span> <a class="input__link"
+                      href="#">Умови договору</a></label>
                   <button class="btn btn__modal" type="submit">Відправити</button>
                 </form>
               </div>
@@ -144,32 +159,41 @@
       </div>
     </section>
 
-       <section class="marketing">
+    <section class="marketing">
       <div class="container">
         <h2 class="section-header">Чим ми займаємося</h2>
         <ul class="list cards-set">
           <li class="marketing__item">
-            <div class="marketing__img">
-              <img src="./img/our-works/img1.jpg" alt="працює за компьютером" width="370" height="294" />
-            </div>
+            <picture class="marketing__img">
+              <source srcset="../img/what-we-do/img1.jpg 1x, ../img/what-we-do/img1x2.jpg 2x" type="image/jpg"
+                media="(min-width: 1200px)">
+              <img src="../img/what-we-do/img1.jpg 1x, ../img/what-we-do/img1x2.jpg 2x" alt="працює за компьютером">
+            </picture>
             <div class="marketing__overlay">
               <p class="marketing__text">Десктопні додатки</p>
             </div>
           </li>
 
           <li class="marketing__item">
-            <div class="marketing__img">
+            <!--      <div class="marketing__img">
               <img src="./img/our-works/img2.jpg" alt="працює за компьютером" width="370" height="294" />
-            </div>
+            </div> -->
+            <picture class="marketing__img">
+              <source srcset="../img/what-we-do/img2.jpg 1x, ../img/what-we-do/img2x2.jpg 2x" type="image/jpg"
+                media="(min-width: 1200px)">
+              <img src="../img/what-we-do/img2.jpg 1x, ../img/what-we-do/img2x2.jpg 2x" alt="працює за компьютером">
+            </picture>
             <div class="marketing__overlay">
               <p class="marketing__text">Мобільні додатки</p>
             </div>
           </li>
 
           <li class="marketing__item">
-            <div class="marketing__img">
-              <img src="./img/our-works/img3.jpg" alt="працює за компьютером" width="370" height="294" />
-            </div>
+          <picture class="marketing__img">
+            <source srcset="../img/what-we-do/img3.jpg 1x, ../img/what-we-do/img3x2.jpg 2x" type="image/jpg"
+              media="(min-width: 1200px)">
+            <img src="../img/what-we-do/img3.jpg 1x, ../img/what-we-do/img3x2.jpg 2x" alt="працює за компьютером">
+          </picture>
             <div class="marketing__overlay">
               <p class="marketing__text">Дизайнерські рішення</p>
             </div>
@@ -178,13 +202,31 @@
       </div>
     </section>
 
-       <section>
+    <section>
       <div class="team__overlay">
         <div class="container team__container">
           <h2 class="section-header">Наша команда</h2>
           <ul class="list cards-set">
             <li class="team__item">
-              <img src="./img/our-team/img.jpg" alt="Член команди" width="270" height="260" />
+              <picture>
+                <source 
+                srcset="../img/team-mobile/team-1mobile.jpg 1x, 
+                ../img/team-mobile/team-1mobile2x.jpg 2x" 
+                type="image/jpg"
+                  media="(max-width: 767px)">
+                  <source 
+                  srcset="../img/team-desk/team-1desk.jpg 1x, 
+                  ../img/team-desk/team-1desk2x.jpg 2x" 
+                  type="image/jpg"
+                    media="(min-width: 1200px)">
+                <source 
+                srcset="../img/team-tablet/team-1tablet.jpg 1x, 
+                ../img/team-tablet/team-1tablet2x.jpg 2x" 
+                type="image/jpg"
+                  media="(min-width: 768px)">
+              
+                <img src="../img/team-mobile/team-1mobile.jpg 1x, ../img/team-mobile/team-1mobile2x.jpg 2x" alt="team member">
+              </picture>
               <h3 class="team__heading">Ігор Дем'яненко</h3>
               <p class="team__profession">Product Designer</p>
               <ul class="social-icons">
@@ -203,7 +245,24 @@
               </ul>
             </li>
             <li class="team__item">
-              <img src="./img/our-team/img-1.jpg" alt="Член команди" width="270" height="260" />
+            <!--   <img src="./img/our-team/img-1.jpg" alt="Член команди" width="270" height="260" /> -->
+          <picture>
+            <source srcset="../img/team-mobile/team-2mobile.jpg 1x, 
+                          ../img/team-mobile/team-2mobile2x.jpg 2x" type="image/jpg" 
+                          media="(max-width: 767px)">
+
+            <source srcset="../img/team-desk/team-2desk.jpg 1x, 
+            ../img/team-desk/team-2desk2x.jpg 2x" type="image/jpg" 
+            media="(min-width: 1200px)">
+          
+            <source srcset="../img/team-tablet/team-2tablet.jpg 1x, 
+                          ../img/team-tablet/team-2tablet2x.jpg 2x" type="image/jpg" 
+                          media="(min-width: 768px)">
+          
+          
+          
+            <img src="../img/team-mobile/team-2mobile.jpg 1x, ../img/team-mobile/team-2mobile2x.jpg 2x" alt="team member">
+          </picture>
               <h3 class="team__heading">Ольга Рєпіна</h3>
               <p class="team__profession">Frontend Developer</p>
               <ul class="social-icons">
@@ -219,9 +278,21 @@
                 <li class="social-background"><a class="social-icon" href=""><svg width="20" height="20">
                       <use href="./img/icons.svg#icon-linkedin"></use>
                     </svg></a></li>
-                  </ul>
+              </ul>
             <li class="team__item">
-              <img src="./img/our-team/img-2.jpg" alt="Член команди" width="270" height="260" />
+          <picture>
+            <source srcset="../img/team-mobile/team-3mobile.jpg 1x, 
+                          ../img/team-mobile/team-3mobile2x.jpg 2x" type="image/jpg" media="(max-width: 767px)">
+            <source srcset="../img/team-desk/team-3desk.jpg 1x, 
+            ../img/team-desk/team-3desk2x.jpg 2x" type="image/jpg" media="(min-width: 1200px)">
+          
+            <source srcset="../img/team-tablet/team-3tablet.jpg 1x, 
+                          ../img/team-tablet/team-3tablet2x.jpg 2x" type="image/jpg" media="(min-width: 768px)">
+          
+            
+          
+            <img src="../img/team-mobile/team-3mobile.jpg 1x, ../img/team-mobile/team-3mobile2x.jpg 2x" alt="team member">
+          </picture>
               <h3 class="team__heading">Микола Тарасов</h3>
               <p class="team__profession">Marketing</p>
               <ul class="social-icons">
@@ -240,7 +311,16 @@
               </ul>
             </li>
             <li class="team__item">
-              <img src="./img/our-team/img-3.jpg" alt="Член команди" width="270" height="260" />
+          <picture>
+            <source srcset="../img/team-mobile/team-4mobile.jpg 1x, 
+                          ../img/team-mobile/team-4mobile2x.jpg 2x" type="image/jpg" media="(max-width: 767px)">
+            <source srcset="../img/team-desk/team-4desk.jpg 1x, 
+            ../img/team-desk/team-4desk2x.jpg 2x" type="image/jpg" media="(min-width: 1200px)">
+            <source srcset="../img/team-tablet/team-4tablet.jpg 1x, 
+                          ../img/team-tablet/team-4tablet2x.jpg 2x" type="image/jpg" media="(min-width: 768px)">
+          
+            <img src="../img/team-mobile/team-4mobile.jpg 1x, ../img/team-mobile/team-4mobile2x.jpg 2x" alt="team member">
+          </picture>
               <h3 class="team__heading">Михайло Єрмаков</h3>
               <p class="team__profession">UI Designer</p>
               <ul class="social-icons">
@@ -261,8 +341,8 @@
           </ul>
         </div>
       </div>
-    </section> 
-      <section class="client__section">
+    </section>
+    <section class="client__section">
       <div class="container">
         <h2 class="section-header">Постійні клієнти</h2>
         <ul class="list cards-set">
@@ -289,57 +369,57 @@
 
     </section>
   </main>
-    <footer class="footer">
+  <footer class="footer">
     <div class="container footer__container">
       <div class="tablet__footer">
         <div class="footer__adress">
-  <a href="./index.html" class="logo link">Web<span
-    class="logo__footer">Studio</span></a>
- <address class="adress">
-    <ul class="list">
-      <li class="footer__item">
-        <a href="https://goo.gl/maps/AhDxowaApjQWC8bn6" target="_blank" rel="noopener noreferrer"
-          class="link footer__contact">м. Київ, пр-т Лесі Українки, 26</a>
-      </li>
-      <li class="footer__item">
-        <a href="tel:+380991111111" class="link footer__contact"> +38 099 111 11 11</a>
-      </li>
-      <li class="footer__item">
-        <a href="mailto:info@example.com" class="link footer__contact">info@example.com</a>
-      </li>
-    </ul>
-  </address>
-  </div>
+          <a href="./index.html" class="logo link">Web<span class="logo__footer">Studio</span></a>
+          <address class="adress">
+            <ul class="list">
+              <li class="footer__item">
+                <a href="https://goo.gl/maps/AhDxowaApjQWC8bn6" target="_blank" rel="noopener noreferrer"
+                  class="link footer__contact">м. Київ, пр-т Лесі Українки, 26</a>
+              </li>
+              <li class="footer__item">
+                <a href="tel:+380991111111" class="link footer__contact"> +38 099 111 11 11</a>
+              </li>
+              <li class="footer__item">
+                <a href="mailto:info@example.com" class="link footer__contact">info@example.com</a>
+              </li>
+            </ul>
+          </address>
+        </div>
 
-  <div class="invite">
-    <p class="footer__header">приєднуйтесь</p>
-    <ul class="list footer__icons">
-      <li class="footer__card"><a class="social-icon footer__icon" href=""><svg width="20" height="20">
-            <use href="./img/icons.svg#icon-instagram"></use>
-          </svg></a></li>
-      <li class="footer__card"><a class="social-icon footer__icon" href=""><svg width="20" height="20">
-            <use href="./img/icons.svg#icon-facebook"></use>
-          </svg></a></li>
-      <li class="footer__card"><a class="social-icon footer__icon" href=""><svg width="20" height="20">
-            <use href="./img/icons.svg#icon-twitter"></use>
-          </svg></a></li>
-      <li class="footer__card"><a class="social-icon footer__icon" href=""><svg width="20" height="20">
-            <use href="./img/icons.svg#icon-linkedin"></use>
-          </svg></a></li>
-    </ul>
-  </div> </div> 
-  <div class="footer-input__field">
-    <p class="footer-input__header">Підпишіться на розсилку</p>
-    <form class="footer-input__form">
-      <input class="footer-input" type="email" placeholder="E-mail">
-      <button class="btn footer-btn" type="submit">Підписатися <svg class="send-icon" width="24" height="24">
-          <use href="./img/icons.svg#icon-icon-send"></use>
-        </svg> </button>
-    </form>
-  </div>
-  </div>
+        <div class="invite">
+          <p class="footer__header">приєднуйтесь</p>
+          <ul class="list footer__icons">
+            <li class="footer__card"><a class="social-icon footer__icon" href=""><svg width="20" height="20">
+                  <use href="./img/icons.svg#icon-instagram"></use>
+                </svg></a></li>
+            <li class="footer__card"><a class="social-icon footer__icon" href=""><svg width="20" height="20">
+                  <use href="./img/icons.svg#icon-facebook"></use>
+                </svg></a></li>
+            <li class="footer__card"><a class="social-icon footer__icon" href=""><svg width="20" height="20">
+                  <use href="./img/icons.svg#icon-twitter"></use>
+                </svg></a></li>
+            <li class="footer__card"><a class="social-icon footer__icon" href=""><svg width="20" height="20">
+                  <use href="./img/icons.svg#icon-linkedin"></use>
+                </svg></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-input__field">
+        <p class="footer-input__header">Підпишіться на розсилку</p>
+        <form class="footer-input__form">
+          <input class="footer-input" type="email" placeholder="E-mail">
+          <button class="btn footer-btn" type="submit">Підписатися <svg class="send-icon" width="24" height="24">
+              <use href="./img/icons.svg#icon-icon-send"></use>
+            </svg> </button>
+        </form>
+      </div>
+    </div>
   </footer>
- 
+
   <script src="./js/mobile-menu.js"></script>
   <script src="./js/modal.js"></script>
 </body>

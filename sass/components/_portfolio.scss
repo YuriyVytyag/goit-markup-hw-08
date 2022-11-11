@@ -5,6 +5,30 @@
   padding-bottom: 94px;
 }
 
+.search__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin-bottom: 50px;
+}
+
+.search__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.search__item {
+@media screen and (min-width: $mobile) {
+  margin-bottom: 15px;
+}
+@media screen and (min-width: $tablet) {
+  margin-bottom: 0px;
+}
+@media screen and (min-width: $desk) {
+  margin-bottom: 0px;
+}
+}
+
 .portfolio__btn {
   padding: 6px 22px;
   border-radius: 4px;
@@ -40,17 +64,6 @@
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
-}
-
-.search__list {
-  display: flex;
-  justify-content: center;
-
-  margin-bottom: 50px;
-}
-
-.search__item:not(:last-child) {
-  margin-right: 8px;
 }
 
 .portfolio__card {
