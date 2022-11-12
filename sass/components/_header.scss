@@ -208,25 +208,3 @@
   }
 }
 
-.mobile__header {
-  @media screen and (min-width: $tablet) {
-    display: none;
-  }
-  @media screen and (min-width: $desk) {
-    display: none;
-  }
-}
-
-.btn__mobile {
-  @media screen and (min-width: $mobile) {
-    background-color: transparent;
-    border: none;
-    display: block;
-    padding: 10px 0;
-  }
-  @media screen and (min-width: $tablet) {
-    background-color: transparent;
-    border: none;
-    display: block;
-    padding: 10px 0;  }
-}
