@@ -1,9 +1,13 @@
 .client__section {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   @media screen and (max-width: $pretablet) {
     padding-top: 60px;
     padding-bottom: 60px;
+    justify-content: center;
+    align-items: center;
   }
   @media screen and (min-width: $tablet) {
     padding-top: 60px;
@@ -15,26 +19,28 @@
   }
 }
 
+.client__background {
+  --items: 6;
+  @media screen and (max-width: $mobile) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: $tablet) {
+    flex-basis: calc((100% - var(--indent) * (3 - 1)) / 3);
+  }
+
+  @media screen and (min-width: $desk) {
+    flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+    flex-wrap: nowrap;
+  }
+}
+
 .client__item {
   display: flex;
   align-items: center;
   justify-content: center;
-  --items: 6;
 
-  @media screen and (max-width: $mobile) {
-    width: 100%;
-  }
-  
-  @media screen and (max-width: $tablet) {
-    flex-basis: calc((100% - var(--indent) * (3 - 1)) / 3);
-    }
-
-  @media screen and (min-width: $desk)  {  
-  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-  flex-wrap: nowrap;
-}
-
- /*  width: 170px;
+  /*  width: 170px;
   height: 90px; */
   border: 1px solid rgba(175, 177, 184, 1);
   border-radius: 4px;
@@ -42,12 +48,15 @@
   fill: #afb1b8;
   transition: border var(cubic), fill var(cubic);
   @media screen and (min-width: $mobile) {
-      padding: 16px 51px; }
-   @media screen and (min-width: $tablet) {
-      padding: 16px 59px; }
+    padding: 16px 51px;
+  }
+  @media screen and (min-width: $tablet) {
+    padding: 16px 59px;
+  }
   @media screen and (min-width: $desk) {
-    padding: 16px 31px;}
- 
+    padding: 16px 31px;
+  }
+
   &:hover,
   &:focus {
     fill: var(--accent-color);

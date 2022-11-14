@@ -169,7 +169,7 @@ margin-right: 93;
   @media screen and (max-width: $pretablet) {
     margin-bottom: 20px;
     display: block;
-    max-width: 100%;
+    width: 100%;
   }
   @media screen and (min-width: $tablet) {
     width: 450px;
@@ -190,6 +190,7 @@ margin-right: 93;
 
   &__field {
     @media screen and (max-width: $pretablet) {
+      width: 100%;
       margin: 0;
     }
     @media screen and (min-width: $desk) { 

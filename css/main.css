@@ -968,11 +968,15 @@ button {
 .client__section {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (max-width: 767px) {
   .client__section {
     padding-top: 60px;
     padding-bottom: 60px;
+    justify-content: center;
+    align-items: center;
   }
 }
 @media screen and (min-width: 768px) {
@@ -988,34 +992,37 @@ button {
   }
 }
 
+.client__background {
+  --items: 6;
+}
+@media screen and (max-width: 480px) {
+  .client__background {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .client__background {
+    flex-basis: calc((100% - var(--indent) * 2) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client__background {
+    flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+    flex-wrap: nowrap;
+  }
+}
+
 .client__item {
   display: flex;
   align-items: center;
   justify-content: center;
-  --items: 6;
   /*  width: 170px;
-   height: 90px; */
+  height: 90px; */
   border: 1px solid rgb(175, 177, 184);
   border-radius: 4px;
   background-color: #ffffff;
   fill: #afb1b8;
   transition: border var(cubic), fill var(cubic);
-}
-@media screen and (max-width: 480px) {
-  .client__item {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .client__item {
-    flex-basis: calc((100% - var(--indent) * 2) / 3);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .client__item {
-    flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-    flex-wrap: nowrap;
-  }
 }
 @media screen and (min-width: 480px) {
   .client__item {
@@ -1224,7 +1231,7 @@ button {
   .footer-input {
     margin-bottom: 20px;
     display: block;
-    max-width: 100%;
+    width: 100%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1249,6 +1256,7 @@ button {
 }
 @media screen and (max-width: 767px) {
   .footer-input__field {
+    width: 100%;
     margin: 0;
   }
 }
