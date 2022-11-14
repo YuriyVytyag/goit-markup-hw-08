@@ -159,12 +159,6 @@ button {
   flex-wrap: wrap;
   gap: 30px;
 }
-@media screen and (min-width: 1200px) {
-  .cards-set {
-    flex-wrap: nowrap;
-  }
-}
-
 .logo {
   align-items: center;
   font-family: var(--secondary-font);
