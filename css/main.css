@@ -172,6 +172,7 @@ button {
   .logo {
     font-size: 24px;
     display: block;
+    margin: 15px 16px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -203,7 +204,7 @@ button {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    padding: 16px 0;
+    padding: 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -392,13 +393,9 @@ button {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
+  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/header/header-mobile.jpg") no-repeat center/cover, #c4c4c4;
 }
-@media screen and (max-width: 767px) {
-  .overlay {
-    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/header/header-mobile.jpg") no-repeat center/cover, #c4c4c4;
-  }
-}
-@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .overlay {
     background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/header/header-mobile2x.jpg") no-repeat center/cover, #c4c4c4;
   }
@@ -1489,7 +1486,6 @@ button {
     background-color: transparent;
     border: none;
     display: block;
-    padding: 10px 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1509,7 +1505,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
+  margin: 15px 10px;
   padding: 0;
   background-color: transparent;
   cursor: pointer;

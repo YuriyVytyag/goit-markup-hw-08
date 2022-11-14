@@ -2,13 +2,12 @@
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  @media screen and (max-width: $pretablet) {
   background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
   url('../img/header/header-mobile.jpg') no-repeat center/cover, #c4c4c4;
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
   url('../img/header/header-mobile2x.jpg') no-repeat center/cover, #c4c4c4;
-  }
+  
   }
   @media screen and (min-width: $tablet) {
   background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
