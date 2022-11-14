@@ -968,8 +968,6 @@ button {
 .client__section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 }
 @media screen and (max-width: 767px) {
   .client__section {
@@ -990,6 +988,11 @@ button {
     padding-top: 94px;
     padding-bottom: 94px;
   }
+}
+
+.clients-set {
+  justify-content: center;
+  align-items: center;
 }
 
 .client__background {

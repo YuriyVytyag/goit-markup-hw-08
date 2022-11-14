@@ -1,8 +1,6 @@
 .client__section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   @media screen and (max-width: $pretablet) {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -19,8 +17,14 @@
   }
 }
 
+.clients-set {
+  justify-content: center;
+  align-items: center;
+}
+
 .client__background {
   --items: 6;
+
   @media screen and (max-width: $mobile) {
     width: 100%;
   }
