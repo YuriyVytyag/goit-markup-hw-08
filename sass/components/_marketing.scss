@@ -1,5 +1,5 @@
 .marketing {
-    @media screen and (min-width: $mobile) {
+    @media screen and (max-width: $pretablet) {
         display: none;
     }
      @media screen and (min-width: $tablet) {

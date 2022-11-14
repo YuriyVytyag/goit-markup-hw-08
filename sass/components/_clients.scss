@@ -1,5 +1,7 @@
 .client__section {
-  @media screen and (min-width: $mobile) {
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (max-width: $pretablet) {
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -14,12 +16,22 @@
 }
 
 .client__item {
+  @media screen and (max-width: $mobile) {
+    width: 100%;
+  }
   display: block;
   align-items: center;
   justify-content: center;
   --items: 6;
   
-  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+  @media screen and (max-width: $tablet) {
+    flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+    }
+
+  @media screen and (max-width: $tablet) {
+flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+
  /*  width: 170px;
   height: 90px; */
   border: 1px solid rgba(175, 177, 184, 1);

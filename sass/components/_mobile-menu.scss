@@ -8,7 +8,7 @@
   }
   
   .btn__mobile {
-    @media screen and (min-width: $mobile) {
+    @media screen and (max-width: $pretablet) {
       background-color: transparent;
       border: none;
       display: block;
@@ -36,7 +36,7 @@
     outline: none;
   }
   
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     .menu-toggle {
       display: none;
     }

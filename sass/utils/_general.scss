@@ -1,6 +1,6 @@
 img {
   display: block;
-  min-width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -23,8 +23,8 @@ button {
   padding-left: 15px;
   padding-right: 15px;
 
-  @media screen and (min-width: $mobile) {
-    width: $mobile;
+  @media screen and (max-width: $pretablet) {
+    max-width: $mobile;
   }
 
   @media screen and (min-width: $tablet) {
@@ -75,7 +75,7 @@ button {
 }
 
 .section-header {
-  @media screen and (min-width: $mobile) {
+  @media screen and (max-width: $pretablet) {
     margin-bottom: 30px;
   }
   @media screen and (min-width: $tablet) {

@@ -1,8 +1,8 @@
 .overlay {
   max-width: 1600px;
- margin-left: auto;
+  margin-left: auto;
   margin-right: auto;
-  @media screen and (min-width: $mobile) {
+  @media screen and (max-width: $pretablet) {
   background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
   url('../img/header/header-mobile.jpg') no-repeat center/cover, #c4c4c4;
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -96,7 +96,7 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   margin: 75px 45px;
   transition: box-shadow var(--cubic);
-  @media screen and (min-width: $mobile) {
+  @media screen and (max-width: $pretablet) {
     max-width: 450px;
 
   }
@@ -230,7 +230,7 @@
   letter-spacing: 0.03em;
   text-decoration: underline;
   color: var(--accent-color);
-  @media screen and (min-width: $mobile) {
+  @media screen and (max-width: $pretablet) {
     font-size: 12px;
   }
   @media screen and (min-width: $tablet) {
@@ -273,7 +273,7 @@
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--secondary-font-color);
-  @media screen and (min-width: $mobile) {
+  @media screen and (max-width: $pretablet) {
     font-size: 12px;
   }
   @media screen and (min-width: $tablet) {
@@ -293,7 +293,7 @@
   border-radius: 2px;
   cursor: pointer;
   transition: fill var(--cubic), background var(--cubic), border-color var(--cubic);
-  @media screen and (min-width: $mobile) {
+  @media screen and (max-width: $pretablet) {
     bottom: 5px;
     left: 3px;
   }

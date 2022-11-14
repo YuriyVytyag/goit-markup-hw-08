@@ -6,7 +6,7 @@
 }
 
 .team__container {
-    @media screen and (min-width: $mobile) {
+    @media screen and (max-width: $pretablet) {
     padding-bottom: 60px;
     padding-top: 60px;}
     @media screen and (min-width: $tablet) {
@@ -18,9 +18,15 @@
     }
 
 .team__item {
-    height: 100%;
-    width: 100%;
-    flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+    @media screen and (max-width: $mobile) {
+        width: 100%;}
+        @media screen and (min-width: $tablet) {
+            flex-basis: calc((100% - 30px ) / 2);
+          }  
+        @media screen and (min-width: $desk) {
+            flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));}
+  
+/*     flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items)); */
 
     background: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);

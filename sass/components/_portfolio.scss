@@ -18,7 +18,7 @@
 }
 
 .search__item {
-@media screen and (min-width: $mobile) {
+@media screen and (max-width: $pretablet) {
   margin-bottom: 15px;
 }
 @media screen and (min-width: $tablet) {
